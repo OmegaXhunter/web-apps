@@ -17,7 +17,17 @@
 
 <body ng-controller="MainController">
     <div class="jumbotron text-center">
-        <h1 >Apps</h1>
+        <h1>Apps</h1>
+    </div>
+    <div class="container">
+        <p>Calcular la distancia</p>
+        <span>pos 1</span>
+        <input class="form-control" ng-model="pos1" placeholder="0" ng-change="calcularResultado()" type="number"
+            step="any">
+        <span>pos 2</span>
+        <input class="form-control" ng-model="pos2" placeholder="0" ng-change="calcularResultado()" type="number"
+            step="any">
+        <p ng-model="resultado">Resultado: {{resultado}}</p>
     </div>
     <div class="container">
         <p>Calcular distancia en 2 dimensiones</p>
@@ -33,8 +43,34 @@
         <span>pos 2 y</span>
         <input class="form-control" ng-model="posy2" placeholder="0" ng-change="calcularResultado2d()" type="number"
             step="any">
-        <p ng-model="distancia2DResultado">Resultado :{{distancia2DResultado}}</p>
+        <p ng-model="distancia2DResultado">Resultado: {{distancia2DResultado}}</p>
     </div>
+    <div class="container">
+        <p>Calcular distancia en 3 dimensiones</p>
+        <span>pos 1 x</span>
+        <input class="form-control" ng-model="pos3dx1" placeholder="0" ng-change="calcularResultado3D()" type="number"
+            step="any">
+        <span>pos 1 y</span>
+        <input class="form-control" ng-model="pos3dy1" placeholder="0" ng-change="calcularResultado3D()" type="number"
+            step="any">
+        <span>pos 1 z</span>
+        <input class="form-control" ng-model="pos3dz1" placeholder="0" ng-change="calcularResultado3D()" type="number"
+            step="any">
+
+        <span>pos 2 x</span>
+        <input class="form-control" ng-model="pos3dx2" placeholder="0" ng-change="calcularResultado3D()" type="number"
+            step="any">
+        <span>pos 2 y</span>
+        <input class="form-control" ng-model="pos3dy2" placeholder="0" ng-change="calcularResultado3D()" type="number"
+            step="any">
+        <span>pos 2 z</span>
+        <input class="form-control" ng-model="pos3dz2" placeholder="0" ng-change="calcularResultado3D()" type="number"
+            step="any">
+
+        <p ng-model="distancia3DResultado">Resultado: {{distancia3DResultado}}</p>
+
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
