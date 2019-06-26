@@ -30,4 +30,15 @@ let app = angular.module('OmegaXApp', []);
         $scope.calcularResultado3D=function(){
           $scope.distancia3DResultado=Math.sqrt(Math.pow($scope.pos3dx2-$scope.pos3dx1,2)+Math.pow($scope.pos3dy2-$scope.pos3dy1,2)+Math.pow($scope.pos3dz2-$scope.pos3dz1,2));
         }
+        //circulo
+        $scope.radio=0;
+        $scope.diametro=0;
+        $scope.circuloAreaResultado=0;
+        $scope.circuloPerimetroResultado=0;
+        $scope.calcularCirculo=function(){
+          $scope.circuloAreaResultado=Math.PI*Math.pow($scope.radio,2);
+          $scope.circuloPerimetroResultado=2*Math.PI*$scope.radio;
+          $scope.diametro=2*$scope.radio;
+        }
+       
     })
