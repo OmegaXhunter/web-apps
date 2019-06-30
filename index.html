@@ -20,6 +20,8 @@
         <h1>Apps</h1>
     </div>
     <div class="container">
+        <button type="button" class="btn btn-primary" ng-click="mostrarItems('distancia')">Distancia entre dos Puntos</button>
+        <div  ng-show="mostrarD1==true">
         <p>Calcular la distancia</p>
         <span>pos 1</span>
         <input class="form-control" ng-model="pos1" placeholder="0" ng-change="calcularResultado()" type="number"
@@ -29,7 +31,10 @@
             step="any">
         <p ng-model="resultado">Resultado: {{resultado}}</p>
     </div>
+    </div>
     <div class="container">
+        <button type="button" class="btn btn-primary" ng-click="mostrarItems('distancia2D')">Distancia entre dos Puntos2D</button>
+        <div ng-show="mostrarD2">
         <p>Calcular distancia en 2 dimensiones</p>
         <span>pos 1 x</span>
         <input class="form-control" ng-model="posx1" placeholder="0" ng-change="calcularResultado2d()" type="number"
@@ -44,8 +49,11 @@
         <input class="form-control" ng-model="posy2" placeholder="0" ng-change="calcularResultado2d()" type="number"
             step="any">
         <p ng-model="distancia2DResultado">Resultado: {{distancia2DResultado}}</p>
+    </div>  
     </div>
     <div class="container">
+            <button type="button" class="btn btn-primary" ng-click="mostrarItems('distancia3D')">Distancia entre dos Puntos3D</button>
+        <div ng-show="mostrarD3">
         <p>Calcular distancia en 3 dimensiones</p>
         <span>pos 1 x</span>
         <input class="form-control" ng-model="pos3dx1" placeholder="0" ng-change="calcularResultado3D()" type="number"
@@ -68,15 +76,18 @@
             step="any">
 
         <p ng-model="distancia3DResultado">Resultado: {{distancia3DResultado}}</p>
-
+    </div>
     </div>
     <div class="container">
+            <button type="button" class="btn btn-primary" ng-click="mostrarItems('circulo')">Circulo</button>
+            <div ng-show="mostrarCirculo">
         <p>calculos del circulo</p>
         <span>Radio</span>
         <input class="form-control" type="number" ng-model="radio" step="any" placeholder="0" ng-change="calcularCirculo()">
         <p ng-model="diametro">Resultado diametro : {{diametro}}</p>
         <p ng-model="circuloAreaResultado">Resultado Area : {{circuloAreaResultado}}</p>
         <p ng-model="circuloPerimetroResultado">Resultado Perimetro : {{circuloPerimetroResultado}}</p>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
