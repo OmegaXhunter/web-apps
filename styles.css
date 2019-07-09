@@ -1,0 +1,20 @@
+.espaciado{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.botones-encabezado{
+    width: 150px;
+    height: 75px;
+    color: blueviolet;
+    background-color: transparent;
+    border-color:blueviolet;
+    margin-left: 1px; 
+}
+.botones-encabezado:hover{
+    background-color: blueviolet;
+    color: white;
+}
+.botones-encabezado:active{
+background-color: transparent;
+color: blueviolet;
+}

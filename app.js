@@ -1,6 +1,10 @@
 let app = angular.module('OmegaXApp', []);
 
     app.controller('MainController', function ($http,$scope) {
+        //variables globales
+        //visibilidad pestañas
+        $scope.mostrarMath=false;
+        $scope.mostrarGames=false;
         //distancia basica
         $scope.mostrarD1=false;
         $scope.pos1=0;
@@ -45,7 +49,17 @@ let app = angular.module('OmegaXApp', []);
           $scope.diametro=2*$scope.radio;
         }
        //funciones generales
-
+        $scope.cambiarSubPaginas=function(value){
+          if(value=='math'){
+            $scope.mostrarMath=true;
+            $scope.mostrarGames=false;
+          }
+          if(value=='games'){
+            $scope.mostrarGames=true;
+            $scope.mostrarMath=false;
+          }
+        }
+        //
        $scope.mostrarItems=function(value){
         if(value=='distancia'){
           //console.log("entro");

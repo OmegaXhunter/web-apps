@@ -19,8 +19,19 @@
     <div class="jumbotron text-center">
         <h1>Apps</h1>
     </div>
+    <div class="btn btn-group">
+        <button class="botones-encabezado"ng-click="cambiarSubPaginas('math')">
+            Math
+        </button>
+        <button class="botones-encabezado"ng-click="cambiarSubPaginas('games')">
+           Web Games
+        </button>
+        
+    </div>
+    <!--Math apps-->
+    <div ng-show="mostrarMath">
     <div class="container">
-        <button type="button" class="btn btn-primary" ng-click="mostrarItems('distancia')">Distancia entre dos Puntos</button>
+        <button type="button" class="btn btn-primary espaciado" ng-click="mostrarItems('distancia')">Distancia entre dos Puntos</button>
         <div  ng-show="mostrarD1==true">
         <p>Calcular la distancia</p>
         <span>pos 1</span>
@@ -33,7 +44,7 @@
     </div>
     </div>
     <div class="container">
-        <button type="button" class="btn btn-primary" ng-click="mostrarItems('distancia2D')">Distancia entre dos Puntos2D</button>
+        <button type="button" class="btn btn-primary espaciado" ng-click="mostrarItems('distancia2D')">Distancia entre dos Puntos2D</button>
         <div ng-show="mostrarD2">
         <p>Calcular distancia en 2 dimensiones</p>
         <span>pos 1 x</span>
@@ -52,7 +63,7 @@
     </div>  
     </div>
     <div class="container">
-            <button type="button" class="btn btn-primary" ng-click="mostrarItems('distancia3D')">Distancia entre dos Puntos3D</button>
+            <button type="button" class="btn btn-primary espaciado" ng-click="mostrarItems('distancia3D')">Distancia entre dos Puntos3D</button>
         <div ng-show="mostrarD3">
         <p>Calcular distancia en 3 dimensiones</p>
         <span>pos 1 x</span>
@@ -79,7 +90,7 @@
     </div>
     </div>
     <div class="container">
-            <button type="button" class="btn btn-primary" ng-click="mostrarItems('circulo')">Circulo</button>
+            <button type="button" class="btn btn-primary espaciado" ng-click="mostrarItems('circulo')">Circulo</button>
             <div ng-show="mostrarCirculo">
         <p>calculos del circulo</p>
         <span>Radio</span>
@@ -89,6 +100,8 @@
         <p ng-model="circuloPerimetroResultado">Resultado Perimetro : {{circuloPerimetroResultado}}</p>
     </div>
     </div>
+</div>
+<!--Fin Math-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
